@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    font-family: 'Gabarito',sans-serif;
+body {
+    font-family: 'Gabarito', sans-serif;
 }
 
-.navbar{
+.navbar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -19,11 +19,12 @@ body{
     background-color: white;
     z-index: 1;
 }
-.navbar__s1__title{
+
+.navbar__s1__title {
     color: #a435f0;
 }
 
-.navbar__s2{
+.navbar__s2 {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
@@ -32,18 +33,19 @@ body{
     gap: 10px;
     align-items: center;
 }
-.navbar__s2 input{
+
+.navbar__s2 input {
     border: none;
     width: 100%;
     font-size: 15px;
     background-color: transparent;
 }
 
-.navbar__s2 input:focus{
+.navbar__s2 input:focus {
     outline: none;
 }
 
-.navbar__s3{
+.navbar__s3 {
     display: flex;
     gap: 10px;
     padding: 10px;
@@ -53,11 +55,12 @@ body{
 
 /*Mylearning*/
 
-.mylearning{
+.mylearning {
     position: relative;
     cursor: pointer;
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
@@ -66,33 +69,44 @@ body{
     padding: 15px;
     display: none;
 }
-.mylearning:hover .mylearning__popup{
+
+.mylearning:hover .mylearning__popup {
     display: block;
 
 }
 
-.categories{
+.categories {
     display: flex;
     padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-around;
+    cursor: pointer;
 }
 
-.categories p{
+.categories p {
     background-color: #a435f0;
     color: white;
     padding: 10px;
     border-radius: 20px;
+    border: solid #a435f0 1px;
 }
 
-.sale-image{
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #a435f0 1px;
+}
+
+.sale-image {
     position: relative;
 }
-.sale-image img{
+
+.sale-image img {
     width: 100%;
 }
 
-.sale-image__offer{
+.sale-image__offer {
     border: solid black 1px;
     width: 35%;
     background-color: white;
@@ -100,39 +114,55 @@ body{
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: Zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
-.recommeded{
+@keyframes Zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.recommeded {
     padding: 10px;
 }
 
-.recommeded__container{
+.recommeded__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.course-card{
+.course-card {
     width: 300px;
 }
-.course-card img{
+
+.course-card img {
     width: 100%;
     height: 120px;
 }
 
-.topics{
+.topics {
     padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
 }
 
-.topics__container p{
+.topics__container p {
     border: solid gray 2px;
     padding: 10px;
     flex-grow: 1;
@@ -140,34 +170,34 @@ body{
 
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container{
+.popular__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.footer{
+.footer {
     background-color: black;
     color: white;
     padding: 30px;
 }
 
-.footer__one{
+.footer__one {
     display: flex;
     gap: 10px;
 }
 
-.footer__one p{
+.footer__one p {
     margin: 20px;
 
 }
 
-.footer__two{
+.footer__two {
     margin: 20px;
     align-items: center;
     display: flex;
